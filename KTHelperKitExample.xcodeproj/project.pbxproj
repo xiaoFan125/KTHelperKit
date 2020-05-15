@@ -16,6 +16,8 @@
 		C691F99C246E3AB800599F9B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C691F99B246E3AB800599F9B /* main.m */; };
 		C691F9A6246E3AB900599F9B /* KTHelperKitExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C691F9A5246E3AB900599F9B /* KTHelperKitExampleTests.m */; };
 		C691F9B1246E3AB900599F9B /* KTHelperKitExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C691F9B0246E3AB900599F9B /* KTHelperKitExampleUITests.m */; };
+		C691F9C6246E3AD100599F9B /* KTDate.m in Sources */ = {isa = PBXBuildFile; fileRef = C691F9C2246E3AD100599F9B /* KTDate.m */; };
+		C691F9C7246E3AD100599F9B /* KTGCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = C691F9C5246E3AD100599F9B /* KTGCDTimer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,11 @@
 		C691F9AC246E3AB900599F9B /* KTHelperKitExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KTHelperKitExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C691F9B0246E3AB900599F9B /* KTHelperKitExampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTHelperKitExampleUITests.m; sourceTree = "<group>"; };
 		C691F9B2246E3AB900599F9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C691F9BF246E3AD100599F9B /* KTHelperKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTHelperKit.h; sourceTree = "<group>"; };
+		C691F9C2246E3AD100599F9B /* KTDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTDate.m; sourceTree = "<group>"; };
+		C691F9C3246E3AD100599F9B /* KTGCDTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTGCDTimer.h; sourceTree = "<group>"; };
+		C691F9C4246E3AD100599F9B /* KTDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTDate.h; sourceTree = "<group>"; };
+		C691F9C5246E3AD100599F9B /* KTGCDTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTGCDTimer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +91,7 @@
 		C691F97D246E3AB600599F9B = {
 			isa = PBXGroup;
 			children = (
+				C691F9BE246E3AD100599F9B /* KTHelperKit */,
 				C691F988246E3AB600599F9B /* KTHelperKitExample */,
 				C691F9A4246E3AB900599F9B /* KTHelperKitExampleTests */,
 				C691F9AF246E3AB900599F9B /* KTHelperKitExampleUITests */,
@@ -135,6 +143,34 @@
 				C691F9B2246E3AB900599F9B /* Info.plist */,
 			);
 			path = KTHelperKitExampleUITests;
+			sourceTree = "<group>";
+		};
+		C691F9BE246E3AD100599F9B /* KTHelperKit */ = {
+			isa = PBXGroup;
+			children = (
+				C691F9BF246E3AD100599F9B /* KTHelperKit.h */,
+				C691F9C0246E3AD100599F9B /* KTCategory */,
+				C691F9C1246E3AD100599F9B /* KTKit */,
+			);
+			path = KTHelperKit;
+			sourceTree = "<group>";
+		};
+		C691F9C0246E3AD100599F9B /* KTCategory */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = KTCategory;
+			sourceTree = "<group>";
+		};
+		C691F9C1246E3AD100599F9B /* KTKit */ = {
+			isa = PBXGroup;
+			children = (
+				C691F9C2246E3AD100599F9B /* KTDate.m */,
+				C691F9C3246E3AD100599F9B /* KTGCDTimer.h */,
+				C691F9C4246E3AD100599F9B /* KTDate.h */,
+				C691F9C5246E3AD100599F9B /* KTGCDTimer.m */,
+			);
+			path = KTKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +303,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C691F9C6246E3AD100599F9B /* KTDate.m in Sources */,
+				C691F9C7246E3AD100599F9B /* KTGCDTimer.m in Sources */,
 				C691F991246E3AB700599F9B /* ViewController.m in Sources */,
 				C691F98B246E3AB600599F9B /* AppDelegate.m in Sources */,
 				C691F99C246E3AB800599F9B /* main.m in Sources */,
@@ -446,6 +484,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "xiaoFan-King.KTHelperKitExample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -463,6 +502,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "xiaoFan-King.KTHelperKitExample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
